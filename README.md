@@ -1,2 +1,2 @@
 # project-systemplate-javaee8
-System template for Java EE 8 projects
+Template for Java EE 8 system projects. Work in progress...
