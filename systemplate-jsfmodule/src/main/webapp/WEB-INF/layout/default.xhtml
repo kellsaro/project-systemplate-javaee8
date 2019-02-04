@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:head>
+	<meta
+		http-equiv="Content-Type"
+		content="text/html; charset=UTF-8" />
+
+	<title>SYSTEMPLATE-JSFMODULE</title>
+
+	<link
+		rel="shortcut icon"
+		href="#{resource['themes:img/favicon.ico']}"
+		type="image/x-icon" />
+
+	<!-- css -->
+	<h:outputStylesheet
+		library="webjars"
+		name="/bootstrap/4.2.1/css/bootstrap.min.css" />
+
+	<h:outputStylesheet
+		library="webjars"
+		name="/font-awesome/5.6.3/css/all.min.css" />
+
+	<h:outputStylesheet
+		library="themes"
+		name="css/index.css" />
+
+</h:head>
+
+<h:body id="entirePage">
+
+	<nav class="navbar navbar-default">
+		<a
+			href="#"
+			class="navbar-left"
+			style="padding-top: 3px;"> <!-- 
+			<h:graphicImage
+				library="themes"
+				name="img/*.png"
+				width="80"
+				heigth="35" />
+			-->
+		</a>
+
+		<div class="container">
+			<div class="navbar-header">
+				<a
+					class="navbar-brand navbar-link"
+					href="#">SYSTEMPLATE/SYSMODULE</a>
+				<!--  	
+				<button class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#navcol-1">
+					<span class="sr-only">Toggle navigation</span><span
+						class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+				-->
+			</div>
+			<div
+				class="collapse navbar-collapse"
+				id="navcol-1">
+				<ul class="nav navbar-nav navbar-right">
+					<!--  
+                    <li class="active" role="presentation"><a href="#">First Item</a></li>
+                    <li role="presentation"><a href="#">Second Item</a></li>
+                    -->
+					<li role="presentation"><a
+						href="#"
+						id="usuario">#{request.remoteUser}</a></li>
+					<li role="presentation"><f:view transient="true">
+							<form jsf:id="form-power-off">
+								<!-- 
+								<p:commandButton
+									actionListener="#{aplicacion.logout}"
+									styleClass="btn-power-off"
+									icon="fa fa-power-off"
+									title="Salir del Sistema"
+									ajax="false" />
+								-->
+							</form>
+						</f:view></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="contenido">
+	    <div style="float:left">
+			<a
+				href="#"
+				class="navbar-left"
+				style="padding-left: 13px;"> 
+				<h:graphicImage
+					library="themes"
+					name="img/logo.png"
+					width="60" />
+			</a>
+		</div>
+
+		<div class="container">
+			<ui:insert name="content">Main Content</ui:insert>
+		</div>
+
+		<footer class="container">
+			<div style="margin-top: 20px; border-top: 1px solid lightgray">
+				<div class="row">
+					<fieldset>
+						<div class="col">&#9400; 2018 SYSTEMPLATE-JSF</div>
+					</fieldset>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- JavaScript -->
+	<h:outputScript
+		library="webjars"
+		name="/bootstrap/4.2.1/js/bootstrap.min.js" />
+	<h:outputScript
+		library="themes"
+		target="body"
+		name="js/locales.es.js" />
+	<h:outputScript
+		library="themes"
+		target="body"
+		name="js/flexibleArea.js" />
+	<h:outputScript
+		library="themes"
+		target="body"
+		name="js/primefaces-overrides.js" />
+
+	<script type="text/javascript">
+	// Enter as Tab
+    var keyHandler = function(e) {
+        var self = $(this), form = self.parents('form:eq(0)'), focusable, next;
+        
+        if (e.keyCode == 13) {
+            
+            focusable = form.find('input,a,select,button').filter(':visible');
+            
+            next = focusable.eq(focusable.index(this)+1);
+            
+            if (next.length) { next.focus(); } else { form.submit(); }
+            
+            return false;
+        }
+    };
+
+    $('body').on('keydown', 'input, select', keyHandler);
+    
+    //Deshabilitacion del right click
+    document.oncontextmenu = function(){return false};
+    </script>
+
+</h:body>
+</html>

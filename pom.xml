@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>kell</groupId>
+	<artifactId>project-systemplate</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>System template</name>
+	<properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        	   
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.ejb.version>3.1</project.ejb.version>
+		<project.java.version>1.8</project.java.version>
+        <project.plugin.mavenCompiler.version>3.1</project.plugin.mavenCompiler.version>
+		<project.plugin.mavenEjb.version>2.3</project.plugin.mavenEjb.version>
+        <!--  
+		<project.plugin.wildflyMaven.version>1.0.2.Final</project.plugin.wildflyMaven.version>
+        -->
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+	    <!-- Java ee 8 -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>systemplate-jsfmodule</module>
+		<module>systemplate-restmodule</module>
+	</modules>
+</project>
