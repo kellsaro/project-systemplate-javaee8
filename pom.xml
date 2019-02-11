@@ -35,5 +35,9 @@
 	<modules>
 		<module>systemplate-jsfmodule</module>
 		<module>systemplate-restmodule</module>
+		<module>systemplate-soapmodule</module>
+		<module>systemplate-soapclientemodule</module>
+		<module>systemplate-domainmodule</module>
+		<module>systemplate-servicemodule</module>
 	</modules>
 </project>

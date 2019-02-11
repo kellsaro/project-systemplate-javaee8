@@ -1,5 +1,5 @@
 /**
- * Base package for REST artifacts
+ * REST artifacts
  */
 /**
  * @author maykell
