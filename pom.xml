@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.ejb.version>3.1</project.ejb.version>
 		<project.java.version>1.8</project.java.version>
-        <project.plugin.mavenCompiler.version>3.1</project.plugin.mavenCompiler.version>
+        <project.plugin.mavenCompiler.version>3.6.1</project.plugin.mavenCompiler.version>
 		<project.plugin.mavenEjb.version>2.3</project.plugin.mavenEjb.version>
         <!--  
 		<project.plugin.wildflyMaven.version>1.0.2.Final</project.plugin.wildflyMaven.version>
