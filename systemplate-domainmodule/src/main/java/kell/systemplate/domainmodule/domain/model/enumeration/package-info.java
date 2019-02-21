@@ -1,5 +1,5 @@
 /**
- * 
+ * Package for enums
  */
 /**
  * @author maykell

@@ -8,10 +8,17 @@
  * then there must be the package kell.systemplate.jsfmodule.web.jsf.controller
  * and the controller UserIndexController under that package.
  * The sufix of the managed name of the controller will be Ctrl.
- * Example: @Named("userIndexCtrl") 
+ * The preferred scope for controllers is ViewScope.
+ * Example: 
+
+@ViewScoped
+@Named("userIndexCtrl")
+public lass UserIndexController implements Serializable {
+} 
+
  */
 /**
- * @author maykell
+ * @author kellsaro@gmail.com
  *
  */
 package kell.systemplate.jsfmodule.web.jsf.controller;

@@ -1,5 +1,7 @@
 /**
+ * Package for entity classes
  * 
+ * FALTA ESCRIBIR AQUÍ UNA PLANTILLA DE ENTIDAD
  */
 /**
  * @author maykell
